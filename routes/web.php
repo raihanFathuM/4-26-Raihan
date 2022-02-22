@@ -46,3 +46,6 @@ Route::get('/contacts', function () {
 Route::resource('/contacts', ContactController::class);
 
 use App\Http\Controllers\ContactController;
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
